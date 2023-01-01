@@ -1,130 +1,31 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-><head
-  ><title
-    >Foreign.Haskell</title
-    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
-     /><meta http-equiv="Content-Style-Type" content="text/css"
-     /><link href="Agda.css" rel="stylesheet" type="text/css"
-     /></head
-  ><body
-  ><pre
-    ><a name="1" class="Comment"
-      >------------------------------------------------------------------------</a
-      ><a name="73"
-      >
-</a
-      ><a name="74" class="Comment"
-      >-- The Agda standard library</a
-      ><a name="102"
-      >
-</a
-      ><a name="103" class="Comment"
-      >--</a
-      ><a name="105"
-      >
-</a
-      ><a name="106" class="Comment"
-      >-- Type(s) used (only) when calling out to Haskell via the FFI</a
-      ><a name="168"
-      >
-</a
-      ><a name="169" class="Comment"
-      >------------------------------------------------------------------------</a
-      ><a name="241"
-      >
+<!DOCTYPE HTML>
+<html><head><meta charset="utf-8"><title>Foreign.Haskell</title><link rel="stylesheet" href="Agda.css"></head><body><pre class="Agda"><a id="1" class="Comment">------------------------------------------------------------------------</a>
+<a id="74" class="Comment">-- The Agda standard library</a>
+<a id="103" class="Comment">--</a>
+<a id="106" class="Comment">-- Type(s) used (only) when calling out to Haskell via the FFI</a>
+<a id="169" class="Comment">------------------------------------------------------------------------</a>
 
-</a
-      ><a name="243" class="Keyword"
-      >module</a
-      ><a name="249"
-      > </a
-      ><a name="250" href="Foreign.Haskell.html#1" class="Module"
-      >Foreign.Haskell</a
-      ><a name="265"
-      > </a
-      ><a name="266" class="Keyword"
-      >where</a
-      ><a name="271"
-      >
+<a id="243" class="Symbol">{-#</a> <a id="247" class="Keyword">OPTIONS</a> <a id="255" class="Pragma">--without-K</a> <a id="267" class="Symbol">#-}</a>
 
-</a
-      ><a name="273" class="Comment"
-      >-- A unit type.</a
-      ><a name="288"
-      >
+<a id="272" class="Keyword">module</a> <a id="279" href="Foreign.Haskell.html" class="Module">Foreign.Haskell</a> <a id="295" class="Keyword">where</a>
 
-</a
-      ><a name="290" class="Keyword"
-      >data</a
-      ><a name="294"
-      > </a
-      ><a name="295" href="Foreign.Haskell.html#295" class="Datatype"
-      >Unit</a
-      ><a name="299"
-      > </a
-      ><a name="300" class="Symbol"
-      >:</a
-      ><a name="301"
-      > </a
-      ><a name="302" class="PrimitiveType"
-      >Set</a
-      ><a name="305"
-      > </a
-      ><a name="306" class="Keyword"
-      >where</a
-      ><a name="311"
-      >
-  </a
-      ><a name="314" href="Foreign.Haskell.html#314" class="InductiveConstructor"
-      >unit</a
-      ><a name="318"
-      > </a
-      ><a name="319" class="Symbol"
-      >:</a
-      ><a name="320"
-      > </a
-      ><a name="321" href="Foreign.Haskell.html#295" class="Datatype"
-      >Unit</a
-      ><a name="325"
-      >
+<a id="302" class="Keyword">open</a> <a id="307" class="Keyword">import</a> <a id="314" href="Level.html" class="Module">Level</a>
 
-</a
-      ><a name="327" class="Symbol"
-      >{-#</a
-      ><a name="330"
-      > </a
-      ><a name="331" class="Keyword"
-      >COMPILED_DATA</a
-      ><a name="344"
-      > </a
-      ><a name="345" href="Foreign.Haskell.html#295" class="Datatype"
-      >Unit</a
-      ><a name="349"
-      > () () </a
-      ><a name="356" class="Symbol"
-      >#-}</a
-      ><a name="359"
-      >
-</a
-      ><a name="360" class="Symbol"
-      >{-#</a
-      ><a name="363"
-      > </a
-      ><a name="364" class="Keyword"
-      >COMPILED_DATA_UHC</a
-      ><a name="381"
-      > </a
-      ><a name="382" href="Foreign.Haskell.html#295" class="Datatype"
-      >Unit</a
-      ><a name="386"
-      > __UNIT__ __UNIT__ </a
-      ><a name="405" class="Symbol"
-      >#-}</a
-      ><a name="408"
-      >
-</a
-      ></pre
-    ></body
-  ></html
->
+<a id="321" class="Comment">------------------------------------------------------------------------</a>
+<a id="394" class="Comment">-- Pairs</a>
+
+<a id="404" class="Keyword">open</a> <a id="409" class="Keyword">import</a> <a id="416" href="Foreign.Haskell.Pair.html" class="Module">Foreign.Haskell.Pair</a> <a id="437" class="Keyword">public</a>
+  <a id="446" class="Keyword">renaming</a>
+  <a id="457" class="Symbol">(</a> <a id="459" href="Foreign.Haskell.Pair.html#863" class="Function">toForeign</a>   <a id="471" class="Symbol">to</a> <a id="474" class="Function">toForeignPair</a>
+  <a id="490" class="Symbol">;</a> <a id="492" href="Foreign.Haskell.Pair.html#1050" class="Function">fromForeign</a> <a id="504" class="Symbol">to</a> <a id="507" class="Function">fromForeignPair</a>
+  <a id="525" class="Symbol">)</a>
+
+<a id="528" class="Comment">------------------------------------------------------------------------</a>
+<a id="601" class="Comment">-- Sums</a>
+
+<a id="610" class="Keyword">open</a> <a id="615" class="Keyword">import</a> <a id="622" href="Foreign.Haskell.Either.html" class="Module">Foreign.Haskell.Either</a> <a id="645" class="Keyword">public</a>
+  <a id="654" class="Keyword">renaming</a>
+  <a id="665" class="Symbol">(</a> <a id="667" href="Foreign.Haskell.Either.html#876" class="Function">toForeign</a>   <a id="679" class="Symbol">to</a> <a id="682" class="Function">toForeignEither</a>
+  <a id="700" class="Symbol">;</a> <a id="702" href="Foreign.Haskell.Either.html#1094" class="Function">fromForeign</a> <a id="714" class="Symbol">to</a> <a id="717" class="Function">fromForeignEither</a>
+  <a id="737" class="Symbol">)</a>
+</pre></body></html>
